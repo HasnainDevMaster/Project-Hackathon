@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+</head>
+<body>
+    <div class="container">
+        <h1>A Static Resume Builder</h1>
+        <form id="resume-form">
+            <fieldset>
+                <legend>Resume Details</legend>
+                <section>
+                    <h2>Personal Information</h2>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </section>
+                <section id="education">
+                    <h2>Education</h2>
+                    <div class="entry">
+                        <label for="degree">Qualification:</label>
+                        <input type="text" id="degree" name="degree" required>
+                        <label for="institution">Institution:</label>
+                        <input type="text" id="institution" name="institution" required>
+                        <label for="year">Year:</label>
+                        <input type="text" id="year" name="year" required>
+                    </div>
+                    <button type="button" id="add-education">Add More</button>
+                </section>
+                <section id="work-experience">
+                    <h2>Work Experience</h2>
+                    <div class="entry">
+                        <label for="job-title">Job Title:</label>
+                        <input type="text" id="job-title" name="job-title" required>
+                        <label for="company">Company:</label>
+                        <input type="text" id="company" name="company" required>
+                        <label for="duration">Duration:</label>
+                        <input type="text" id="duration" name="duration" required>
+                    </div>
+                    <button type="button" id="add-work-experience">Add More</button>
+                </section>
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <div class="entry">
+                        <label for="skills">Skill:</label>
+                        <input type="text" id="skills" name="skills" required>
+                    </div>
+                    <button type="button" id="add-skills">Add More</button>
+                </section>
+                <button type="submit">Generate Resume</button>
+                <legend class="centered-legend">Author: Syed Hasnain Ali Shah</legend>
+            </fieldset>
+        </form>
+        <div id="generated-resume" class="resume" contenteditable="true"></div>
+    </div>
+    <script src="dist/script.js"></script>
+</body>
+</html>
